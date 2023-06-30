@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Spin Wheel</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+  <div id="mainbox" class="mainbox">
+        <div id="box" class="box">
+            <div class="box1">
+                <span class="span1"> <b>Prize 1</b> </span>
+                <span class="span2"> <b>Prize 2</b> </span>
+                <span class="span3"> <b>Prize 3</b> </span>
+                <span class="span4"> <b>try again</b> </span>
+            </div>
+            <div class="box2">
+                <span class="span5"> <b>Prize 4</b> </span>
+                <span class="span6"> <b>Prize 5</b> </span>
+                <span class="span7"> <b>Prize 6</b> </span>
+                <span class="span8"> <b>Prize 7</b> </span>
+            </div>
+        </div>
+        <button class="spin" onclick="myfunction()">Spin</button>
+        <div id="msgBox" class="messageWin">
+            <div class="msg">
+
+                <h1 id="msgText"></h1>
+                <button class="ok" onclick="hideMsgBox()">OK</button>
+            </div>
+        </div>
+    </div>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,196 @@
+*{
+    box-sizing: border-box;
+    padding: 0%;
+    margin: 0%;
+    outline: none;
+}
+
+body{
+    font-family: 'Courier New', Courier, monospace;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    background: gray;
+    background: url('https://cdn.pixabay.com/photo/2016/07/07/16/46/dice-1502706_1280.jpg');
+
+    background-size: 100% 100%;
+}
+
+.mainbox{
+    position: relative;
+    width: 500px;
+    height: 500px;
+}
+.mainbox::after{
+    position: absolute;
+    content: '';
+    width: 32px;
+    height: 32px;
+    background: url('https://cdn-icons-png.flaticon.com/128/7986/7986634.png');
+    background-size: 32px;
+    right: -32px;
+    top: 50%;
+    transform: translateY(-50%);
+
+}
+.box{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    border-radius: 50%;
+    border: 10px solid black;
+    overflow: hidden;
+    transition: all ease 5s;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+   
+}
+span{
+    width: 50%;
+    height: 50%;
+    display: inline-block;
+    position: absolute;
+
+    
+}
+span b{
+    width: 75px;
+    height: 75px;
+    line-height: 65px;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 0.8rem;
+    background-color: darkgray;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    
+    transform: translate(-50%, -50%);
+    box-shadow: inset 0 3px 3px 0 #717171;
+}
+.span1{
+    clip-path: polygon(0 92%, 100% 50%, 0 8%);
+    background-color: yellow;
+    top: 120px;
+    left: 0%;
+   }
+.span2{
+    clip-path: polygon(100% 92%, 0 50%, 100% 8%);
+    background-color: red;
+    top: 120px;
+    right: 0;
+   }
+.span3{
+    clip-path: polygon(50% 0%, 8% 100%, 92% 100%);
+    background-color: green;
+    bottom: 0;
+    left: 120px;
+   }
+.span4{
+    clip-path: polygon(50% 100%, 92% 0, 8% 0);
+    background-color: rgb(172, 0, 0);
+    top: 0;
+    left: 120px;
+   }
+
+   .span5{
+    clip-path: polygon(0 92%, 100% 50%, 0 8%);
+    background-color: rgb(151, 231, 22);
+    top: 120px;
+    left: 0%;
+   }
+.span6{
+    clip-path: polygon(100% 92%, 0 50%, 100% 8%);
+    background-color: rgb(47, 252, 115);
+    top: 120px;
+    right: 0;
+   }
+.span7{
+    clip-path: polygon(50% 0%, 8% 100%, 92% 100%);
+    background-color: rgb(127, 60, 250);
+    bottom: 0;
+    left: 120px;
+   }
+.span8{
+    clip-path: polygon(50% 100%, 92% 0, 8% 0);
+    background-color: aquamarine;
+    top: 0;
+    left: 120px;
+   }
+
+.box2{
+    width: 100%;
+    height: 100%;
+    transform: rotate(-135deg);
+}
+.spin{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    border: 2px solid black;
+    background-color: rgb(240, 147, 147);
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+}
+.spin:hover{
+    background-color: rgb(250, 86, 86);
+}
+.spin:active{
+    width: 70px;
+    height: 70px;
+    font-size: 0.8rem;
+}
+
+.mainbox.animate:after{
+    animation: animateArrow 0.7s ease infinite;
+}
+@keyframes animateArrow{
+    50%{
+        right: -40px;
+    }
+}
+
+.hidden{
+
+    display: none;
+}
+
+.messageWin{
+    display: none;
+    width: 100%;
+    height: 15vh;
+    position: relative;
+    bottom: 55%;
+}
+
+.msg{
+    width: 100%;
+    height: 100%;
+    background-color: rgb(255, 178, 126);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1%;
+    border: 2px solid rgb(0, 0, 0);
+}
+.msg h1{
+    font-size: 1.2rem;
+    text-align: center;
+}
+.ok{
+    width: 20%;
+    height: 5vh;
+    background-color: lime;
+    border: none;
+    
+}
+.ok:hover{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
